@@ -33,6 +33,15 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
+  timeout: 30 * 1000, // Set a global timeout of 30 seconds for each test
+  expect: {
+    /**
+     * Maximum time expect() should wait for the condition to be met.
+     * For example in `await expect(locator).toHaveText();`
+     */
+    timeout: 5000, // 5 seconds
+  },
+
   /* Configure projects for major browsers */
   projects: [
     {
